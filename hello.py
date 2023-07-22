@@ -14,7 +14,11 @@ class MyGridLayout(GridLayout):
         self.add_widget(Label(text="Your name:"))
         self.add_widget(TextInput(multiline=False))
         # set age widget
-        
+        self.add_widget(Label(text="Your age:"))
+        self.add_widget(TextInput(multiline=False))
+        # set place widget
+        self.add_widget(Label(text="Your place:"))
+        self.add_widget(TextInput(multiline=False))
 
 class MyApp(App):
     def build(self):
