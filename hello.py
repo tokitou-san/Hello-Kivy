@@ -5,10 +5,10 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
 
-class MyGridLayout(GridLayout):
+class MainGridLayout(GridLayout):
     def __init__(self, *args, **kwargs):
         # initialize constructor
-        super(MyGridLayout, self).__init__(*args, **kwargs)
+        super(MainGridLayout, self).__init__(*args, **kwargs)
         # configure no:of cols
         self.cols = 1
         self.row_force_default = True
@@ -52,13 +52,12 @@ class MyGridLayout(GridLayout):
         place = self.place.text
 
         # set an response widget
-        self.add_widget(Label(
-            text=f"Hi {name}! you're {age} years old and from {place}. Nice to meet you :)")
-        )
+        self.response = Label(text=f"Hi {name}! you're {age} years old and from {place}. Nice to meet you :)")
+        self.add_widget(self.response)
 
-class MyApp(App):
+class MainApp(App):
     def build(self):
-        return MyGridLayout()
+        return MainGridLayout()
 
 if __name__ == "__main__":
-    MyApp().run()
+    MainApp().run()
