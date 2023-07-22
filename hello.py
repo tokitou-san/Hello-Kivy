@@ -3,6 +3,7 @@ from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
 
 class MyGridLayout(GridLayout):
     def __init__(self, *args, **kwargs):
@@ -19,6 +20,8 @@ class MyGridLayout(GridLayout):
         # set place widget
         self.add_widget(Label(text="Your place:"))
         self.add_widget(TextInput(multiline=False))
+        # set button widget
+        self.add_widget(Button(text="Submit"))
 
 class MyApp(App):
     def build(self):
