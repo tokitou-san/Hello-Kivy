@@ -10,19 +10,26 @@ class MyGridLayout(GridLayout):
         # initialize constructor
         super(MyGridLayout, self).__init__(*args, **kwargs)
         # configure no:of cols
-        self.cols = 2
+        self.cols = 1
+        # new grid for inputs
+        self.input_grids = GridLayout()
+        self.input_grids.cols = 2
         # set name widget
-        self.add_widget(Label(text="Your name:"))
+        self.input_grids.add_widget(Label(text="Your name:"))
         self.name = TextInput(multiline=False)
-        self.add_widget(self.name)
+        self.input_grids.add_widget(self.name)
         # set age widget
-        self.add_widget(Label(text="Your age:"))
+        self.input_grids.add_widget(Label(text="Your age:"))
         self.age = TextInput(multiline=False)
-        self.add_widget(self.age)
+        self.input_grids.add_widget(self.age)
         # set place widget
-        self.add_widget(Label(text="Your place:"))
+        self.input_grids.add_widget(Label(text="Your place:"))
         self.place = TextInput(multiline=False)
-        self.add_widget(self.place)
+        self.input_grids.add_widget(self.place)
+
+        # add input grids
+        self.add_widget(self.input_grids)
+
         # set button widget
         self.submit_button = Button(text="Submit", on_press=self.on_press)
         self.add_widget(self.submit_button)
