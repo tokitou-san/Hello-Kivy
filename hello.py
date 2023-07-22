@@ -13,15 +13,27 @@ class MyGridLayout(GridLayout):
         self.cols = 2
         # set name widget
         self.add_widget(Label(text="Your name:"))
-        self.add_widget(TextInput(multiline=False))
+        self.name = TextInput(multiline=False)
+        self.add_widget(self.name)
         # set age widget
         self.add_widget(Label(text="Your age:"))
-        self.add_widget(TextInput(multiline=False))
+        self.age = TextInput(multiline=False)
+        self.add_widget(self.age)
         # set place widget
         self.add_widget(Label(text="Your place:"))
-        self.add_widget(TextInput(multiline=False))
+        self.place = TextInput(multiline=False)
+        self.add_widget(self.place)
         # set button widget
-        self.add_widget(Button(text="Submit"))
+        self.submit_button = Button(text="Submit", on_press=self.on_press)
+        self.add_widget(self.submit_button)
+
+    def on_press(self, instance):
+        name = self.name.text
+        age = self.age.text
+        place = self.place.text
+
+        # set an response widget
+        self.add_widget(Label(text=f"Hi {name}! you're {age} years old and from {place}. Nice to meet you :)"))
 
 class MyApp(App):
     def build(self):
