@@ -12,7 +12,7 @@ class MyGridLayout(GridLayout):
         # configure no:of cols
         self.cols = 1
         self.row_force_default = True
-        self.row_default_height = 50
+        self.row_default_height = 100
         # new grid for inputs
         self.input_grids = GridLayout(
             row_force_default = True,
