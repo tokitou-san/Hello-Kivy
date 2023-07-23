@@ -20,9 +20,17 @@
 
 		BoxLayout:
 			orientation: 'horizontal'
+			spacing: 10
 			
 			BoxLayout:
 				orientation: 'vertical'
+				canvas.before:
+					Color:
+						rgba: (1, 1, 1, 0.25)
+					Rectangle:
+						size: self.size
+						pos: self.pos
+
 				Label:
 					text: "Your name:"
 				Label:
