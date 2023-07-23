@@ -1,5 +1,12 @@
 #:import utils kivy.utils
 
+# default styles
+<Button>
+	size_hint_y: None
+	height: 50
+	background_normal: ''
+	background_color: utils.get_color_from_hex("#7e87fc")
+
 <MainGridLayout>
 	name: name
 	age: age
@@ -36,11 +43,13 @@
 					id: place
 					multiline: False
 
-		Button:
-			text: "Submit"
-			size_hint_y: None
-			height: 50
-			background_normal: ''
-			background_color: utils.get_color_from_hex("#7e87fc")
+		BoxLayout:
+			orientation: "horizontal"
+			spacing: 20
 
-			on_press: root.handle_press()
+			Button:
+				text: "Submit"
+				on_press: root.handle_press()
+
+			Button:
+				text: "Clear"
