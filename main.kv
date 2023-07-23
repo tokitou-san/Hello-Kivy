@@ -5,32 +5,36 @@
 	age: age
 	place: place
 
-	GridLayout:
-		cols: 1
-		size: root.width, root.height
-		row_force_default: True
-		row_default_height: 100
+	BoxLayout:
+		orientation: 'vertical'
+		size: (root.width, root.height)
+		spacing: 20
+		padding: 20
 
-		GridLayout:
-			cols: 2
-			row_default_height: 50
-			row_force_default: True
+		BoxLayout:
+			orientation: 'horizontal'
+			
+			BoxLayout:
+				orientation: 'vertical'
+				Label:
+					text: "Your name:"
+				Label:
+					text: "Your age:"
+				Label:
+					text: "Your place:"
+			
+			BoxLayout:
+				orientation: 'vertical'
 
-			Label:
-				text: "Your name:"
-			TextInput:
-				id: name
-				multiline: False
-			Label:
-				text: "Your age:"
-			TextInput:
-				id: age
-				multiline: False
-			Label:
-				text: "Your place:"
-			TextInput:
-				id: place
-				multiline: False
+				TextInput:
+					id: name
+					multiline: False
+				TextInput:
+					id: age
+					multiline: False
+				TextInput:
+					id: place
+					multiline: False
 
 		Button:
 			text: "Submit"
