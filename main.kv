@@ -6,9 +6,13 @@
 	GridLayout:
 		cols: 1
 		size: root.width, root.height
+		row_force_default: True
+		row_default_height: 100
 
 		GridLayout:
 			cols: 2
+			row_default_height: 50
+			row_force_default: True
 
 			Label:
 				text: "Your name:"
@@ -28,4 +32,6 @@
 
 		Button:
 			text: "Submit"
+			size_hint_y: None
+			height: 50
 			on_press: root.handle_press()
