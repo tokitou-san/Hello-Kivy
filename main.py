@@ -4,7 +4,7 @@ from kivy.core.window import Window
 from kivy.uix.widget import Widget
 from kivy.lang import Builder
 
-Builder.load_file("image.kv")
+Builder.load_file("float_layout.kv")
 class MainGridLayout(Widget):
     pass
 
