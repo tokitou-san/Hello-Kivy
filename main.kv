@@ -1,4 +1,8 @@
 <MainGridLayout>
+	name: name
+	age: age
+	place: place
+
 	GridLayout:
 		cols: 1
 		size: root.width, root.height
@@ -9,15 +13,19 @@
 			Label:
 				text: "Your name:"
 			TextInput:
+				id: name
 				multiline: False
 			Label:
 				text: "Your age:"
 			TextInput:
+				id: age
 				multiline: False
 			Label:
 				text: "Your place:"
 			TextInput:
+				id: place
 				multiline: False
 
 		Button:
 			text: "Submit"
+			on_press: root.handle_press()
