@@ -1,5 +1,6 @@
 import kivy
 from kivy.app import App
+from kivy.core.window import Window
 from kivy.uix.widget import Widget
 from kivy.lang import Builder
 
@@ -10,6 +11,7 @@ class MainGridLayout(Widget):
 
 class MainApp(App):
     def build(self):
+        Window.clearcolor = (240/255, 240/255, 240/255, 1)
         return MainGridLayout()
 
 if __name__ == "__main__":
