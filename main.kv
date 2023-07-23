@@ -8,9 +8,18 @@
 	background_color: utils.get_color_from_hex("#7e87fc")
 
 <MainGridLayout>
+	# varialbes
 	name: name
 	age: age
 	place: place
+
+	# styles
+	canvas.before:
+		Color:
+			rgba: (240/255, 240/255, 240/255, 1)
+		Rectangle:
+			size: self.size
+			pos: self.pos
 
 	BoxLayout:
 		orientation: 'vertical'
@@ -26,7 +35,7 @@
 				orientation: 'vertical'
 				canvas.before:
 					Color:
-						rgba: (1, 1, 1, 0.25)
+						rgba: (0, 0, 0, 1)
 					Rectangle:
 						size: self.size
 						pos: self.pos
