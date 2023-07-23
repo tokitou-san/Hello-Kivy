@@ -21,6 +21,11 @@ class MainGridLayout(Widget):
         self.age.text = ""
         self.place.text = ""
 
+    def handle_clear(self):
+        self.name.text = ""
+        self.age.text = ""
+        self.place.text = ""
+
 
 class MainApp(App):
     def build(self):
