@@ -1,3 +1,5 @@
+#:import utils kivy.utils
+
 <MainGridLayout>
 	name: name
 	age: age
@@ -34,4 +36,7 @@
 			text: "Submit"
 			size_hint_y: None
 			height: 50
+			background_normal: ''
+			background_color: utils.get_color_from_hex("#7e87fc")
+
 			on_press: root.handle_press()
