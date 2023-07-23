@@ -8,7 +8,7 @@ class MainGridLayout(Widget):
     age = ObjectProperty(None)
     place = ObjectProperty(None)
 
-    def handle_press(self):
+    def handle_press(self) -> None:
         name = self.name.text
         age = self.age.text
         place = self.place.text
@@ -21,7 +21,7 @@ class MainGridLayout(Widget):
         self.age.text = ""
         self.place.text = ""
 
-    def handle_clear(self):
+    def handle_clear(self) -> None:
         self.name.text = ""
         self.age.text = ""
         self.place.text = ""
