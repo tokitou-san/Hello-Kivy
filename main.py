@@ -15,9 +15,7 @@ class MainGridLayout(Widget):
         # print response
         print(f"Hi {name}! you're {age} years old and from {place}")
         # clear inputs
-        self.name.text = ""
-        self.age.text = ""
-        self.place.text = ""
+        self.handle_clear()
 
     def handle_clear(self) -> None:
         self.name.text = ""
