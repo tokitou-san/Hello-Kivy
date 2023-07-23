@@ -12,9 +12,7 @@ class MainGridLayout(Widget):
         name = self.name.text
         age = self.age.text
         place = self.place.text
-        # add response widget
-        # self.response = Label(text=f"Hi {name}! you're {age} years old and from {place}")
-        # self.add_widget(self.response)
+        # print response
         print(f"Hi {name}! you're {age} years old and from {place}")
         # clear inputs
         self.name.text = ""
